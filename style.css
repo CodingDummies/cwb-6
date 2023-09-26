@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.root {
+  min-height: 100vh;
+  background: linear-gradient(
+      180deg,
+      rgba(96, 22, 22, 0.3) 0%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(101, 1, 163, 0.06) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 1, 77, 0.59) 0%,
+      rgba(2, 1, 75, 0.38) 0%,
+      #020052 0%,
+      rgba(2, 0, 81, 0.9) 0.01%,
+      rgba(3, 1, 73, 0.26) 48.54%,
+      rgba(2, 0, 79, 0.75) 99.99%,
+      rgba(3, 1, 70, 0) 100%
+    );
+  padding-bottom: 2rem;
+}
+
+nav {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+ul {
+  display: flex;
+  gap: 3rem;
+}
+
+h1 {
+  width: 76%;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Koulen;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 89px; /* 107.229% */
+}
+
+p {
+  color: #fff;
+  font-family: Karma;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 400;
+  width: 76%;
+  line-height: 34px; /* 188.889% */
+}
+
+.brand-logo {
+  position: relative;
+}
+
+.light {
+  width: 158px;
+  height: 97px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100px;
+  border: 1px solid #000;
+  background: rgba(36, 0, 255, 0.3);
+  filter: blur(50px);
+}
+
+button {
+  margin-top: 3rem;
+  width: 310px;
+  height: 80px;
+  border-radius: 100px;
+  background: linear-gradient(
+    180deg,
+    rgba(219, 0, 255, 0.65) 0%,
+    rgba(219, 0, 255, 0.62) 40.1%,
+    rgba(220, 207, 255, 0) 100%
+  );
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Karma;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px; /* 108.333% */
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: none;
+  justify-content: center;
+}
+
+button img {
+  max-width: 100%;
+}
+
+.banner {
+  position: relative;
+}
+
+.blue-light {
+  width: 476px;
+  height: 97px;
+  border-radius: 100px;
+  border: 1px solid #000;
+  background: rgba(36, 0, 255, 0.4);
+  filter: blur(50px);
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  z-index: -1;
+}
+
+.white-light {
+  width: 5rem;
+  height: 10rem;
+  border: 1px solid #000;
+  background: rgba(99, 92, 140, 0.3);
+  filter: blur(50px);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li.active {
+  background-color: #4a148c;
+}
+
+nav ul li:hover {
+  background-color: #4a148c;
+}
+
+.banner-img {
+  width: 633px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  background: linear-gradient(
+      180deg,
+      rgba(96, 22, 22, 0.3) 0%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(101, 1, 163, 0.06) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 1, 77, 0.59) 0%,
+      rgba(2, 1, 75, 0.38) 0%,
+      #020052 0%,
+      rgba(2, 0, 81, 0.9) 0.01%,
+      rgba(3, 1, 73, 0.26) 48.54%,
+      rgba(2, 0, 79, 0.75) 99.99%,
+      rgba(3, 1, 70, 0) 100%
+    );
+}
+
+@media (max-width: 1300px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .banner-img {
+    width: 450px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .row {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .banner {
+    grid-row-start: 1;
+    margin: 0 auto;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p,
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .blue-light {
+    left: 0;
+    max-width: 100%;
+  }
+
+  .banner-img {
+    max-width: 100%;
+  }
+
+  .sidenav li a,
+  .sidenav li a i {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .sidenav li {
+    width: 80%;
+  }
+
+  .sidenav li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidenav li.active {
+    background-color: #4a148c;
+  }
+
+  .sidenav li:hover {
+    background-color: #4a148c;
+  }
+}
+
+@media (max-width: 375px) {
+  button {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+}
