@@ -250,6 +250,16 @@ nav ul li:hover {
   .sidenav li:hover {
     background-color: #4a148c;
   }
+
+  .brand-logo {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .brand-logo i {
+    height: fit-content;
+  }
 }
 
 @media (max-width: 375px) {
